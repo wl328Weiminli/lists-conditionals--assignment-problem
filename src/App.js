@@ -11,7 +11,6 @@ class App extends Component {
   changingLengthHandler = (e) => {
     this.setState({
       stringList: e.target.value.split(""),
-      length: e.target.value.length,
     });
   };
 
@@ -68,7 +67,6 @@ class App extends Component {
 
         <InputComponent
           changed={this.changingLengthHandler}
-          length={this.state.length}
           value={this.state.stringList.join("")}
         />
         <ValidationComponent length={this.state.stringList.length} />
